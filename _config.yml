@@ -1,77 +1,61 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 theme: jekyll-theme-so-simple
 # remote_theme: mmistakes/so-simple-theme
 skin: "/assets/css/skins/default.css"
 locale: en-US
-title: "My Awesome Site"
-description: "It really is the best."
-baseurl: # the subpath of your site, e.g. "/blog"
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: # path of site logo, e.g. "/images/logo.png"
+title: "TheSonicVerdict"
+description: "Deep dives, hot takes, and sonic truth — a blog for music lovers."
+baseurl: "" # Leave empty for GitHub Pages (username.github.io)
+url: "https://justhal22.github.io/TheSonicVerdict" # Replace with your actual GitHub Pages URL
+logo: "/assets/images/sonic-logo.png" # Put your logo in assets/images/
 date_format: "%B %-d, %Y"
-read_time: # reading time estimates, e.g. true
-words_per_minute: # 200
+read_time: true
+words_per_minute: 200
+
 mathjax:
-  enable: # MathJax equations, e.g. true, false (default)
-  combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
-  tags:  # "none", "ams" (default), "all"
+  enable: false
+
 google_fonts:
   - name: "Source Sans Pro"
     weights: "400,400i,700,700i"
   - name: "Lora"
     weights: "400,400i,700,700i"
-google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
-disqus:
-  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
-twitter:
-  username: # site's Twitter username, e.g. "mmistakes"
 
-# Liquid
+google_analytics: "" # Optional
+disqus:
+  shortname: "thesonicverdict" # Set this up on Disqus if you want comments
+
+twitter:
+  username: "sonicverdict" # Or your real Twitter/X
+
+# Liquid settings
 liquid:
   error_mode: strict
 
 # Build settings
 permalink: /:categories/:title/
 markdown: kramdown
+
 feed:
   path: atom.xml
 
-# Pagination - https://jekyllrb.com/docs/pagination/
-# paginate: 10
-# paginate_path: /page:num/
+# Pagination
+paginate: 6
+paginate_path: "/page:num/"
 
 # Search
-search_full_content: false # can have performance implications for large sites
+search_full_content: true
 
-# Taxonomy pages
-# category_archive_path: "/categories/#"
-# tag_archive_path: "/tags/#"
+# Taxonomy (category/tag pages)
+category_archive_path: "/categories/"
+tag_archive_path: "/tags/"
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
 
 plugins:
   - jekyll-seo-tag
@@ -81,7 +65,6 @@ plugins:
 
 # Front Matter Defaults
 defaults:
-  # Posts defaults
   - scope:
       path: "_posts"
       type: posts
@@ -89,19 +72,31 @@ defaults:
       layout: post
       share: true
 
-# Site Author
+# Author details
 author:
-  name:
-  picture:
-  email:
-  twitter:
+  name: "JustHal"
+  picture: "/assets/images/author.png" # Optional author avatar
+  email: "halbrookes22@gmail.com"
+  twitter: "notavailable"
   links:
-    - title:
-      url:
-      icon:
+    - title: GitHub
+      url: "https://github.com/justhal22"
+      icon: fab fa-github
+    - title: Twitter
+      url: "https://twitter.com/sonicverdict"
+      icon: fab fa-twitter
+    - title: Email
+      url: "mailto:halbrookes22@gmail.com"
+      icon: fas fa-envelope
 
 # Footer Links
 footer_links:
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
+  - title: GitHub
+    url: "https://github.com/justhal22/TheSonicVerdict"
+    icon: fab fa-github
+  - title: Twitter
+    url: "https://twitter.com/sonicverdict"
+    icon: fab fa-twitter
